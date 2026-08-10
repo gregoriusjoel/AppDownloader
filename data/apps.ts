@@ -33,6 +33,17 @@ export const APPS: Record<string, AppConfig> = {
     downloadUrl: "https://github.com/gregoriusjoel/AppDownloader/releases/download/ATQ/atq_v.1.2.2.apk",
     updatedAt: "2026-08-10",
   },
+  ptpn: {
+    slug: "ptpn",
+    name: "PTPN",
+    description: "Aplikasi mobile resmi PTPN untuk manajemen dan operasional.",
+    version: "1.0.0",
+    size: "65.7 MB",
+    platform: "Android",
+    developer: "gregoriusjoel",
+    downloadUrl: "https://github.com/gregoriusjoel/AppDownloader/releases/download/PTPN/ptpn.apk",
+    updatedAt: "2026-08-10",
+  },
 };
 
 export function getAppBySlug(slug: string): AppConfig | undefined {
