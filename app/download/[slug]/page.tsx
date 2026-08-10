@@ -27,18 +27,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const iconUrl = app.icon || "/icon.png";
+
   return {
     title: `Unduh ${app.name} – Aplikasi ${app.platform}`,
     description: `Unduh versi terbaru ${app.name} (${app.version}) untuk ${app.platform}. Portal unduhan langsung resmi.`,
+    icons: {
+      icon: iconUrl,
+      apple: iconUrl,
+    },
     openGraph: {
       title: `Unduh ${app.name} – Aplikasi ${app.platform}`,
       description: app.description,
       type: "website",
+      images: [iconUrl],
     },
     twitter: {
       card: "summary",
       title: `Unduh ${app.name} – Aplikasi ${app.platform}`,
       description: app.description,
+      images: [iconUrl],
     },
   };
 }
