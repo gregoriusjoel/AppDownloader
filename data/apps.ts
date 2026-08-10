@@ -30,7 +30,7 @@ export const APPS: Record<string, AppConfig> = {
     platform: "Android",
     developer: "gregoriusjoel",
     icon: "/apps/atq/logo/ATQ.png",
-    downloadUrl: "https://github.com/gregoriusjoel/ptpn/releases/download/ATQ/atq_v.1.2.2.apk",
+    downloadUrl: "https://github.com/gregoriusjoel/AppDownloader/releases/download/ATQ/atq_v.1.2.2.apk",
     updatedAt: "2026-08-10",
   },
 };

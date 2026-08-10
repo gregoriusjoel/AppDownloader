@@ -12,7 +12,7 @@ Portal distribusi dan pengunduhan aplikasi APK Android yang **100% Static & Serv
 ## ✨ Fitur Utama
 
 - **100% Static & Fast (`output: 'export'`)**: Dikompilasi menjadi file HTML/CSS/JS murni yang dapat di-deploy secara gratis di Vercel, Netlify, atau GitHub Pages.
-- **Direct GitHub Releases Link**: Pengunduhan ditangani langsung oleh browser pengakses menuju URL GitHub Release (`https://github.com/gregoriusjoel/ptpn/releases/download/ATQ/atq_v.1.2.2.apk`).
+- **Direct GitHub Releases Link**: Pengunduhan ditangani langsung oleh browser pengakses menuju URL GitHub Release (`https://github.com/gregoriusjoel/AppDownloader/releases/download/ATQ/atq_v.1.2.2.apk`).
 - **Isolasi Akses Pengunjung**: Pengguna umum yang mengakses tautan unduh (contoh: `/download/atq`) **tidak dapat mengakses dashboard admin** (tidak ada navigasi/tautan ke dashboard utama).
 - **Proteksi PIN Admin (`2816`)**: Halaman utama portal (`/`) dilindungi oleh sistem PIN unik. Hanya pengelola yang dapat membuka dashboard untuk melihat semua aplikasi dan membuat Kode QR.
 - **Publikasi GitHub Otomatis**: Menampilkan informasi publisher secara otomatis dari pemilik repositori GitHub Release (*"Published by gregoriusjoel"*).
@@ -62,7 +62,7 @@ downloader-web/
 
 ```bash
 # Clone repository
-git clone https://github.com/gregoriusjoel/ptpn.git
+git clone https://github.com/gregoriusjoel/AppDownloader.git
 cd downloader-web
 
 # Install dependensi
@@ -101,7 +101,7 @@ export const APPS: Record<string, AppConfig> = {
     platform: "Android",
     developer: "gregoriusjoel", // Otomatis diekstrak dari owner URL GitHub jika dikosongkan
     icon: "/apps/atq/logo/ATQ.png",
-    downloadUrl: "https://github.com/gregoriusjoel/ptpn/releases/download/ATQ/atq_v.1.2.2.apk",
+    downloadUrl: "https://github.com/gregoriusjoel/AppDownloader/releases/download/ATQ/atq_v.1.2.2.apk",
   },
 };
 ```
@@ -124,7 +124,7 @@ npx vercel
 ```
 
 ### Metode 2: Vercel Dashboard (GitHub Integration)
-1. Push proyek ini ke repository GitHub Anda.
+1. Push proyek ini ke repository GitHub Anda (`https://github.com/gregoriusjoel/AppDownloader.git`).
 2. Buka [Vercel Dashboard](https://vercel.com/new) dan pilih repository ini.
 3. Framework Preset: **Next.js**.
 4. Klik **Deploy**.
