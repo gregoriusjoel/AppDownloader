@@ -184,7 +184,7 @@ export default function DashboardPage() {
               <div>
                 <div className="flex items-start justify-between gap-4 mb-4">
                   <AppIcon name={app.name} icon={app.icon} size="md" />
-                  <QRCodeModal slug={app.slug} appName={app.name} />
+                  <QRCodeModal slug={app.slug} appName={app.name} icon={app.icon} />
                 </div>
 
                 <h2 className="text-xl font-bold text-[#111318] tracking-tight group-hover:text-black transition-colors">

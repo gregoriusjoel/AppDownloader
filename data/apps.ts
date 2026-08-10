@@ -41,6 +41,7 @@ export const APPS: Record<string, AppConfig> = {
     size: "65.7 MB",
     platform: "Android",
     developer: "gregoriusjoel",
+    icon: "/apps/ptpn/ptpn-logo.png",
     downloadUrl: "https://github.com/gregoriusjoel/AppDownloader/releases/download/PTPN/ptpn.apk",
     updatedAt: "2026-08-10",
   },

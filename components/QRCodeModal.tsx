@@ -6,9 +6,10 @@ import { QrCode, X, Copy, Check } from "lucide-react";
 interface QRCodeModalProps {
   slug: string;
   appName: string;
+  icon?: string;
 }
 
-export default function QRCodeModal({ slug, appName }: QRCodeModalProps) {
+export default function QRCodeModal({ slug, appName, icon }: QRCodeModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [portalUrl, setPortalUrl] = useState("");
@@ -20,9 +21,9 @@ export default function QRCodeModal({ slug, appName }: QRCodeModalProps) {
   }, [slug]);
 
   const qrImageUrl = portalUrl
-    ? `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(
+    ? `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(
         portalUrl
-      )}&margin=10`
+      )}&margin=10&ecc=H`
     : "";
 
   const handleCopy = async () => {
@@ -63,12 +64,26 @@ export default function QRCodeModal({ slug, appName }: QRCodeModalProps) {
 
             <div className="bg-[#F6F7F9] p-4 rounded-xl border border-[#E4E7EB] inline-block mx-auto mb-5">
               {qrImageUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={qrImageUrl}
-                  alt={`Kode QR untuk portal unduhan ${appName}`}
-                  className="w-48 h-48 mx-auto rounded-lg select-none"
-                />
+                <div className="relative w-48 h-48 mx-auto">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={qrImageUrl}
+                    alt={`Kode QR untuk portal unduhan ${appName}`}
+                    className="w-48 h-48 rounded-lg select-none"
+                  />
+                  {icon && (
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <div className="w-11 h-11 rounded-xl bg-white p-1 shadow-md border border-[#E4E7EB] flex items-center justify-center overflow-hidden">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={icon}
+                          alt={`${appName} logo`}
+                          className="w-full h-full object-contain rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
               ) : (
                 <div className="w-48 h-48 bg-gray-200 animate-pulse rounded-lg" />
               )}
