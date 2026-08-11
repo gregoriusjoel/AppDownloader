@@ -34,7 +34,7 @@ export default function AppIcon({ name, icon, size = "lg" }: AppIconProps) {
         alt={`${name} icon`}
         fill
         sizes="(max-width: 640px) 80px, 96px"
-        className="object-cover"
+        className="object-contain p-2"
         onError={() => setError(true)}
         priority
       />
