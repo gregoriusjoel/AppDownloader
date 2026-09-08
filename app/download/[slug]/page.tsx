@@ -4,6 +4,7 @@ import { getAppBySlug, getAllAppSlugs, extractGitHubOwner } from "@/data/apps";
 import AppHeader from "@/components/AppHeader";
 import AppIcon from "@/components/AppIcon";
 import DownloadButton from "@/components/DownloadButton";
+import QRCodeModal from "@/components/QRCodeModal";
 import InstallationGuide from "@/components/InstallationGuide";
 import PlatformBadge from "@/components/PlatformBadge";
 
@@ -105,12 +106,18 @@ export default async function DownloadPage({ params }: PageProps) {
               </span>
             </div>
 
-            {/* Download Button CTA (Keep in English: Download APK) */}
-            <div className="w-full pt-2">
+            {/* Download Button CTA & QR Code */}
+            <div className="w-full pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
               <DownloadButton
                 downloadUrl={app.downloadUrl}
                 appName={app.name}
                 buttonText={app.platform === "Android" ? "Download APK" : undefined}
+              />
+              <QRCodeModal
+                slug={app.slug}
+                appName={app.name}
+                icon={app.icon}
+                variant="button"
               />
             </div>
 

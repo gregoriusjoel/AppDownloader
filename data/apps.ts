@@ -45,6 +45,18 @@ export const APPS: Record<string, AppConfig> = {
     downloadUrl: "https://github.com/gregoriusjoel/AppDownloader/releases/download/PTPN-v1.1.9/siaga_v1.1.9.apk",
     updatedAt: "2026-09-08",
   },
+  renhan: {
+    slug: "renhan",
+    name: "E-Absensi",
+    description: "Aplikasi mobile resmi E-Absensi Renhan untuk pencatatan kehadiran dan manajemen absensi pegawai.",
+    version: "2.0.0",
+    size: "81.9 MB",
+    platform: "Android",
+    developer: "gregoriusjoel",
+    icon: "/apps/renhan/renhan-logo.png",
+    downloadUrl: "https://github.com/gregoriusjoel/AppDownloader/releases/download/E-Absensi-v2.0.0/v2.0.0.apk",
+    updatedAt: "2026-09-08",
+  },
 };
 
 export function getAppBySlug(slug: string): AppConfig | undefined {
