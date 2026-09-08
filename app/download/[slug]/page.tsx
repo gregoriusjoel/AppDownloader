@@ -107,7 +107,11 @@ export default async function DownloadPage({ params }: PageProps) {
 
             {/* Download Button CTA (Keep in English: Download APK) */}
             <div className="w-full pt-2">
-              <DownloadButton downloadUrl={app.downloadUrl} appName={app.name} />
+              <DownloadButton
+                downloadUrl={app.downloadUrl}
+                appName={app.name}
+                buttonText={app.platform === "Android" ? "Download APK" : undefined}
+              />
             </div>
 
             {/* Publisher Metadata (Keep in English: Published by) */}

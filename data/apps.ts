@@ -37,13 +37,13 @@ export const APPS: Record<string, AppConfig> = {
     slug: "ptpn",
     name: "PTPN",
     description: "Aplikasi mobile resmi PTPN untuk manajemen dan operasional.",
-    version: "1.1.8",
-    size: "28.5 MB",
+    version: "1.1.9",
+    size: "66.0 MB",
     platform: "Android",
     developer: "gregoriusjoel",
     icon: "/apps/ptpn/ptpn-logo.png",
-    downloadUrl: "https://github.com/gregoriusjoel/AppDownloader/releases/download/PTPN-V1.1.8/ptpn-v1.1.8.apk",
-    updatedAt: "2026-08-26",
+    downloadUrl: "https://github.com/gregoriusjoel/AppDownloader/releases/download/PTPN-v1.1.9/siaga_v1.1.9",
+    updatedAt: "2026-09-08",
   },
 };
 
