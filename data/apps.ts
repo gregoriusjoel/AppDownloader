@@ -42,7 +42,7 @@ export const APPS: Record<string, AppConfig> = {
     platform: "Android",
     developer: "gregoriusjoel",
     icon: "/apps/ptpn/ptpn-logo.png",
-    downloadUrl: "https://github.com/gregoriusjoel/AppDownloader/releases/download/PTPN-v1.1.9/siaga_v1.1.9",
+    downloadUrl: "https://github.com/gregoriusjoel/AppDownloader/releases/download/PTPN-v1.1.9/siaga_v1.1.9.apk",
     updatedAt: "2026-09-08",
   },
 };

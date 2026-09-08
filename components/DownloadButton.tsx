@@ -13,10 +13,6 @@ export default function DownloadButton({
   appName,
   buttonText,
 }: DownloadButtonProps) {
-  const handleDownload = () => {
-    window.location.href = downloadUrl;
-  };
-
   const label =
     buttonText ||
     (downloadUrl.toLowerCase().endsWith(".apk") ? "Download APK" : "Download App");
@@ -25,7 +21,6 @@ export default function DownloadButton({
     <div className="w-full">
       <a
         href={downloadUrl}
-        onClick={handleDownload}
         className="w-full sm:w-auto min-w-[240px] h-14 px-8 rounded-full bg-[#111318] text-white font-semibold text-base flex items-center justify-center gap-3 shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-transform duration-150 ease-out focus:outline-none focus:ring-2 focus:ring-[#111318] focus:ring-offset-2 select-none"
         aria-label={`${label} for ${appName}`}
       >
