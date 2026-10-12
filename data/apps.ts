@@ -38,7 +38,7 @@ export const APPS: Record<string, AppConfig> = {
     name: "PTPN",
     description: "Aplikasi mobile resmi PTPN untuk manajemen dan operasional.",
     version: "1.1.10",
-    size: "42.1 MB",
+    size: "66.8 MB",
     platform: "Android",
     developer: "gregoriusjoel",
     icon: "/apps/ptpn/ptpn-logo.png",
